@@ -8,6 +8,8 @@
 body{
     font-family: 'Kanit', sans-serif;
     background-color: #f4f4f4;
+
+    overflow-x: hidden;
 }
 
 
@@ -21,6 +23,7 @@ body{
     overflow: hidden;
 
 }
+
 
 
 a{
@@ -716,8 +719,9 @@ a{
     }
 
 
-    
+  
 }
+
 
 
 /* END MEDIA  */
