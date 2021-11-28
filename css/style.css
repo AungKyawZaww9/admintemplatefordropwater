@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Kanit', sans-serif;
+    background-color: #f4f4f4;
+}
+
+
+
+/* START NAVBAR */
+.slidebars{
+    height: 100%;
+    /* background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url(../asserts/img/water.jpg); */
+    background-color: #242e4f;
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
+    overflow: hidden;
+
+}
+
+
+a{
+    text-decoration:none;
+}
+
+.navimages{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    object-fit: cover;
+}
+
+
+.borderbottoms{
+    border-top: 1px groove #aaa;
+    border-bottom: 1px groove #aaa;
+}
+
+
+
+
+
+.navbar-toggler{
+    transition: all 0.5s;
+}
+
+.box{
+    width:35px;
+    height: 5px;
+    background-color: #242e4f;
+    margin:4px 0px;
+
+    transition: all 1s;
+
+}
+
+.navbar-toggler.showcrosses .boxones{
+    transform: translate(-1px,10px) rotate(45deg);
+}
+
+.navbar-toggler.showcrosses .boxtwos{
+    opacity: 0;
+}
+
+.navbar-toggler.showcrosses .boxthrees{
+    transform: translate(-1px,-8px) rotate(-45deg);
+}
+
+
+.currents{
+    width: 120%;
+    background-color: blue;
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+    transition: all 0.5s;
+
+}
+
+
+.currents:hover{
+    transform: translateY(-2px);
+}
+
+
+
+.effectlinks{
+    transition: border-radius 0.1s;
+}
+
+
+.effectlinks:hover{
+    width: 120%;
+    color:#000 !important;
+    background-color: #f4f4f4;
+    border-radius: 15px 0px 0px 15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}
+
+.effectlinks:hover .fas,.effectlinks:hover .far{
+    color:blue;
+}
+
+
+/* Start Top Side Bar  */
+.topsidebars{
+    background-color: #242e4f;
+    color: #fff;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+
+}
+
+
+
+.form-control{
+    color:#fff;
+    background-color:transparent;
+    box-shadow: none;
+    border:none;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+    
+}
+
+.form-control:focus{
+    color: #fff;
+    background-color: transparent;
+    box-shadow: none;
+    border:none;
+    border-bottom: 1px solid grey;
+    border-radius: 0;
+
+}
+
+.parentbullets{
+    position:relative;
+}
+
+.bullets::after{
+    content:'';
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+
+    position:absolute;
+    top:-5px;
+    right:15px;
+}
+/* End Top Side Bar  */
+
+
+/* END NAVBAR  */
+
+
+/* START WELCOME SECTION  */
+.welcome{
+    border-left: 2px solid blue;
+}
+/* END WELCOME SECTION  */
+
+
+
+
+/* START PRICING SECTION  */
+.dollars{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.icons{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+
+    text-align: center;
+    line-height: 40px;
+}
+
+
+
+.cards{
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+
+    transition: all 0.5s;
+}
+
+.cards:hover{
+    /* transform: translateY(-3px); */
+
+    animation-name: upandown;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+}
+
+
+
+@keyframes upandown{
+    0%{
+        transform: scale(0.95);
+    }
+
+    50%{
+        transform: scale(1.1);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+/* END PRICING SECTION  */
+
+
+
+
+/* START CHART SECTION  */
+
+/* Start Chart Table Section */
+.chartcontainers{
+    width:100%;
+    height: 300px;
+    /* background-color: red; */
+
+    display: flex;
+    margin: auto;
+}
+
+
+.chartboxs{
+    width:50px;
+    height: 100%;
+    background-color: transparent;
+    margin: 0 5px;
+
+    position:relative;
+}
+
+.texts{
+    position: absolute;
+    bottom: -13%;
+    left:20%;
+}
+
+
+.fillboxones,.fillboxtwos,.fillboxthrees,.fillboxfours,.fillboxfives,.fillboxsixs,.fillboxservens,.fillboxeights{
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+    left:0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fillboxones{
+    height: 0%;
+    background-color: green;
+
+    animation: fillaniones 3s linear forwards;
+
+}
+
+
+@keyframes fillaniones{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 50%;
+    }
+}
+
+
+.fillboxtwos{
+    height: 0%;
+    background-color: palevioletred;
+
+    animation: fillanitwos 4s linear forwards;
+
+}
+
+
+@keyframes fillanitwos{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 60%;
+    }
+}
+
+
+.fillboxthrees{
+    height: 0%;
+    background-color: purple;
+
+    animation: fillanithrees 3s linear forwards;
+}
+
+@keyframes fillanithrees{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 30%;
+    }
+}
+
+
+.fillboxfours{
+    height: 0%;
+    background-color: skyblue;
+
+    animation: fillanifours 5s linear forwards;
+
+}
+
+@keyframes fillanifours{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 45%;
+    }
+}
+
+
+.fillboxfives{
+    height: 0%;
+    background-color: black;
+
+    animation: fillanifives 4s linear forwards;
+
+}
+
+
+@keyframes fillanifives{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 55%;
+    }
+}
+
+
+.fillboxsixs{
+    height: 0%;
+    background-color: yellow;
+
+    animation: fillanisixs 5s linear forwards;
+}
+
+@keyframes fillanisixs{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 65%;
+    }
+}
+
+
+.fillboxservens{
+    height: 80%;
+    background-color: blue;
+
+    animation: fillaniservens 4s linear forwards;
+}
+
+
+@keyframes fillaniservens{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 80%;
+    }
+}
+
+
+
+
+.fillboxeights{
+    height: 0%;
+    background-color: red;
+
+    animation: fillanieights 6s linear forwards;
+    
+}
+
+@keyframes fillanieights{
+    0%{
+        height: 0%;
+    }
+
+    100%{
+        height: 99%;
+    }
+}
+
+
+.chartboxs .counter{
+    color: #fff;
+}
+/* End Chart Table Section */
+
+
+/* Start Table Section  */
+.tableimgs{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+
+.tableborders:hover{
+    background-color: blue;
+    color: #fff !important;
+    transform: scale(1.1);
+    box-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    cursor:pointer;
+}
+/* End Table Section  */
+
+/* END CHART SECTION  */
+
+
+
+/* START PROGRESS SECTION  */
+
+.progressdivs{
+    background-color: #3b47f5;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+
+
+.progresseones{
+    width: 0%;
+    background-color: grey !important;
+
+    animation-name: progressaniones;
+    animation-duration: 1.8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes progressaniones{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 30%;
+    }
+}
+
+
+.progressetwos{
+    width:0%;
+    background-color: yellow;
+
+    animation: progressanitows 2.5s linear forwards;
+}
+
+@keyframes progressanitows{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 50%;
+    }
+}
+
+
+
+.progressethrees{
+    width:0%;
+    background-color: green;
+
+    animation: progressethrees 3.7s linear forwards;
+}
+
+@keyframes progressethrees{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 70%;
+    }
+}
+
+
+
+.progressefours{
+    width:0%;
+    background-color: rgb(128, 73, 0);
+
+    animation: progressefours 4.2s linear forwards;
+}
+
+@keyframes progressefours{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 80%;
+    }
+}
+
+
+
+.progressefives{
+    width:0%;
+    background-color: red;
+
+    animation: progressefives 5.3s linear forwards;
+}
+
+@keyframes progressefives{
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+
+.taskborders{
+    padding: 20px;
+    border-left: 2px solid blue;
+
+    position: relative;
+}
+
+
+.taskborders::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 5px solid blue;
+    border-radius: 50%;
+
+    position:absolute;
+    top:0;
+    left:-9px;
+}
+/* END PROGRESS SECTION  */
+
+
+/* START ACTIVITIES QUICK POST SECTION  */
+
+.circledisplays{
+    border: 2px solid #aaa;
+    border-radius: 5px;
+    box-shadow: -2px 3px 5px rgba(0,0,0,0.5);
+}
+
+
+.circles{
+    width: 180px;
+    height: 180px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-left: 18px;
+
+    position: relative;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fillcircles{
+    width: 220px;
+    height: 220px;
+    background: conic-gradient(
+		
+		red 40%,
+		orange 0%,
+
+		orange 50%,
+		blue 0%,
+
+		blue 100%
+    
+        
+        );
+
+
+    border-radius: 50%;
+    position: absolute;
+    top:-20px;
+    left:-20px;
+
+    z-index: -1;
+
+    
+}
+
+
+.showlables{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.showcircle{
+    margin: 0 10px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.showones{
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border: 5px solid orange;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+    
+}
+
+.showtowes{
+    border-color: red;
+}
+
+.showthrees{
+    border-color: blue;
+}
+
+.btneffects{
+    transition: all 0.5s;
+}
+
+.btneffects:hover{
+    transform: translateY(-3px);
+}
+
+
+.circlestexts{
+    text-align: justify;
+}
+
+
+
+/* END ACTIVITIES QUICK POST SECTION  */
+
+
+/* START FOOTER SECTION  */
+.bgcolors{
+    background: linear-gradient(
+        #757f9a,
+        #d7dde8)
+}
+/* END FOOTER SECTION  */
+
+
+
+
+/* START MEDIA  */
+@media (max-width: 760px){
+    .slidebars{
+        height: auto;
+
+        position: static;
+    }
+
+    .topsidebars{
+        position:static;
+        margin:0;
+    }
+
+    .margincharts{
+        margin-left: 0%;
+    }
+
+    .circles{
+        margin-left: 30px;
+    }
+
+
+    
+}
+
+
+/* END MEDIA  */
+
+
+
